@@ -5,7 +5,7 @@
 
 You can see this template live at:
 
-http://jehna.github.io/saas-site
+https://jehna.github.io/saas-site
 
 Note: The product does not actually exist
 
