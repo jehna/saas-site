@@ -18,24 +18,28 @@ body {
 header {
     color: rgba(255,255,255,0.6);
     /*background: linear-gradient(135deg, rgba(92,136,224,1) 0%,rgba(68,51,140,1) 100%);*/
-    padding: 30px;
+    padding: 66px 30px 0;
     border-radius: 10px;
 }
 
-header::before {
-    content: "";
+h1 {
+    font-size: 2.3em;
+}
+
+h2 {
+    font-size: 1.4em;
+}
+
+header img {
     display: block;
     float: right;
-    background: url('oauth.svg') no-repeat;
-    background-size: cover;
     width: 50%;
-    padding-top: 50%;
     transform: rotate(30deg);
-    margin: -2% 10px -50px;
+    margin: -11% 10px -50px;
 }
 
 @media (max-width:530px) {
-    header::before {
+    header img {
         display: none;
     }
 }
@@ -45,15 +49,20 @@ header h1 {
 }
 
 header button,
-footer button {
+footer button,
+header button[type="submit"],
+footer button[type="submit"] {
     background: #FFAA2A;
     color: #FFF;
     padding: 10px 30px;
     border-bottom: 4px solid #C27400;
+    font-size: 1.3em;
 }
 
 header button:hover,
-footer button:hover {
+footer button:hover,
+header button[type="submit"]:hover,
+footer button[type="submit"]:hover {
     background: #FFBE5C;
     color: #FFF;
     border-bottom-width: 3px;
@@ -61,21 +70,15 @@ footer button:hover {
 }
 
 header button:active,
-footer button:active {
+footer button:active,
+header button[type="submit"]:active,
+footer button[type="submit"]:active {
     border-bottom-width: 1px;
     margin-top: 3px;
 }
 
 article {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-@media (min-width:768px) {
-    article:nth-child(3) {
-        background: #FFF url('editor.png') bottom right no-repeat;
-        background-size: 40%;
-        padding-right: 50%;
-    }
 }
 
 footer {
@@ -94,4 +97,31 @@ footer nav {
 footer nav * {
     font-size: 13px;
     opacity: 0.8;
+}
+
+section {
+    overflow: hidden;
+}
+
+section:first-child {
+    margin-top: -36px;
+}
+
+blockquote {
+    font-size: 1.5em;
+    font-style: italic;
+}
+
+blockquote small {
+    display: block;
+}
+
+small {
+    font-size: 0.4em;
+}
+
+@media (min-width: 620px) {
+    body {
+        font-size: 18px;
+    }
 }
